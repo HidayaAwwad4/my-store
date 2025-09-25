@@ -30,8 +30,10 @@ export class CartComponent implements OnInit {
   }
 
   removeItem(index: number) {
-    const productId = this.cartItems[index].product.id;
-    this.cartService.remove(productId);
+    const product = this.cartItems[index].product;
+    this.cartService.remove(product.id);
+
+    alert(`${product.name} has been removed from your cart.`);
   }
 
   updateQuantity(index: number, qty: number) {

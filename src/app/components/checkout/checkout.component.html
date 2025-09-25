@@ -12,16 +12,36 @@
 
     <form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)">
       <label for="name">Full Name</label>
-      <input id="name" name="name" ngModel required minlength="3">
+      <input
+        id="name"
+        name="name"
+        [(ngModel)]="customer.name"
+        (ngModelChange)="onFieldChange('name', $event)"
+        required minlength="3">
 
       <label for="address">Address</label>
-      <input id="address" name="address" ngModel required>
+      <input
+        id="address"
+        name="address"
+        [(ngModel)]="customer.address"
+        (ngModelChange)="onFieldChange('address', $event)"
+        required>
 
       <label for="email">Email</label>
-      <input id="email" name="email" ngModel required email>
+      <input
+        id="email"
+        name="email"
+        [(ngModel)]="customer.email"
+        (ngModelChange)="onFieldChange('email', $event)"
+        required email>
 
       <label for="card">Card Number</label>
-      <input id="card" name="card" ngModel required minlength="10">
+      <input
+        id="card"
+        name="card"
+        [(ngModel)]="customer.card"
+        (ngModelChange)="onFieldChange('card', $event)"
+        required minlength="10">
 
       <div class="order-summary" *ngIf="cartItems$ | async as items">
         <h3>Order Summary</h3>
