@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Classic White T-Shirt",
+    "description": "100% cotton, comfortable everyday tee.",
+    "price": 19.99,
+    "imageUrl": "https://i.pinimg.com/736x/a7/e9/0d/a7e90dd949514229dc04291d21ad2d40.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Blue Jeans",
+    "description": "Slim-fit denim jeans.",
+    "price": 49.99,
+    "imageUrl": "https://i.pinimg.com/736x/be/ff/e4/beffe4844522fc471b42109fdc1ee5e4.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Leather Wallet",
+    "description": "Genuine leather wallet with multiple slots.",
+    "price": 29.99,
+    "imageUrl": "https://i.pinimg.com/1200x/e5/2a/77/e52a770598e1c3c2441b6af2100ef772.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Black Sneakers",
+    "description": "Comfortable black sneakers for daily wear.",
+    "price": 59.99,
+    "imageUrl": "https://i.pinimg.com/736x/3f/e0/ff/3fe0ff6c30f1cd41977a66b276a664d6.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Red Hoodie",
+    "description": "Warm red hoodie made from soft fabric.",
+    "price": 39.99,
+    "imageUrl": "https://i.pinimg.com/1200x/37/d3/46/37d346b3ee74178dfab45be43a127bf3.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Sports Watch",
+    "description": "Waterproof sports watch with digital display.",
+    "price": 79.99,
+    "imageUrl": "https://i.pinimg.com/1200x/10/fc/c8/10fcc84808276cb6185f03372ee933d7.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Sunglasses",
+    "description": "Stylish sunglasses with UV protection.",
+    "price": 24.99,
+    "imageUrl": "https://i.pinimg.com/1200x/07/75/c2/0775c22cb44eaeb1ee586605ed6a13e8.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Backpack",
+    "description": "Durable backpack suitable for school and travel.",
+    "price": 49.99,
+    "imageUrl": "https://i.pinimg.com/736x/9a/dc/3d/9adc3d631a96689357266f3b4ba4e096.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Wireless Earbuds",
+    "description": "Bluetooth wireless earbuds with charging case.",
+    "price": 59.99,
+    "imageUrl": "https://i.pinimg.com/1200x/20/c3/b1/20c3b11cc696928982961a88acf60660.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Baseball Cap",
+    "description": "Adjustable baseball cap with embroidered logo.",
+    "price": 14.99,
+    "imageUrl": "https://i.pinimg.com/736x/74/27/69/742769706fb96e9c8a3c21c98ddc4b5d.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Casual Belt",
+    "description": "Leather belt suitable for jeans and casual pants.",
+    "price": 19.99,
+    "imageUrl": "https://i.pinimg.com/1200x/a3/29/2a/a3292a4e153024b0a5398d6a9c0293fb.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Summer Sandals",
+    "description": "Lightweight sandals perfect for summer walks.",
+    "price": 29.99,
+    "imageUrl": "https://i.pinimg.com/1200x/08/54/f1/0854f1363b0b4a7a2fc3079afd43d40b.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Formal Shirt",
+    "description": "Elegant formal shirt for office or events.",
+    "price": 34.99,
+    "imageUrl": "https://i.pinimg.com/1200x/6e/1e/f7/6e1ef7309b5775eb3d37fff8888e90a0.jpg"
+  }
+]

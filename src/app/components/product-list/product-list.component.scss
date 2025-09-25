@@ -1,0 +1,124 @@
+.page-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.header {
+  background: #48709c;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    font-size: 22px;
+  }
+
+  nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 30px 0 20px;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 0 30px 40px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 10px 0 6px;
+    color: #222;
+  }
+
+  .description {
+    font-size: 14px;
+    color: #666;
+    min-height: 40px;
+  }
+
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #28a745;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+
+    button, a {
+      flex: 1;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    button {
+      background: #28a745;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background: #218838;
+      }
+    }
+
+    a {
+      background: #426b9a;
+
+      &:hover {
+        background: #0056b3;
+      }
+    }
+  }
+}

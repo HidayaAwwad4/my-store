@@ -1,0 +1,33 @@
+.confirmation-container {
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  h1 {
+    color: #28a745;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+
+    &:hover {
+      background: #0056b3;
+    }
+  }
+}

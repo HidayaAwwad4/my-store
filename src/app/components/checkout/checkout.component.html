@@ -1,0 +1,37 @@
+<div class="page-container">
+  <header class="header">
+    <h1>My Store</h1>
+    <nav>
+      <a routerLink="/">Home</a>
+      <a routerLink="/cart">Cart</a>
+    </nav>
+  </header>
+
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+
+    <form #checkoutForm="ngForm" (ngSubmit)="onSubmit(checkoutForm)">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" ngModel required minlength="3">
+
+      <label for="address">Address</label>
+      <input id="address" name="address" ngModel required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" ngModel required email>
+
+      <label for="card">Card Number</label>
+      <input id="card" name="card" ngModel required minlength="10">
+
+      <div class="order-summary" *ngIf="cartItems$ | async as items">
+        <h3>Order Summary</h3>
+        <div *ngFor="let item of items">
+          {{ item.product.name }} x {{ item.quantity }} = ${{ (item.product.price * item.quantity) | number:'1.2-2' }}
+        </div>
+        <h3>Total: ${{ total$ | async | number:'1.2-2' }}</h3>
+      </div>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+</div>

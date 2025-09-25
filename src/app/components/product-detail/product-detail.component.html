@@ -1,0 +1,24 @@
+<div class="page-container" *ngIf="product">
+  <header class="header">
+    <h1>My Store</h1>
+    <nav>
+      <a routerLink="/">Home</a>
+      <a routerLink="/cart">Cart</a>
+    </nav>
+  </header>
+
+  <div class="detail-container">
+    <img [src]="product.imageUrl" [alt]="product.name">
+    <div class="details">
+      <h2>{{ product.name }}</h2>
+      <p class="price">${{ product.price }}</p>
+      <p class="description">{{ product.description }}</p>
+
+      <label>
+        Quantity:
+        <input type="number" [(ngModel)]="quantity" min="1">
+      </label>
+      <button class="add-btn" (click)="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+</div>
