@@ -11,14 +11,15 @@ import { CartService, CartItem } from '../../services/cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  cartItems: CartItem[] = [];
+  cartItems: (CartItem & { previousQuantity: number })[] = [];
   total: number = 0;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     this.cartService.getItems().subscribe(items => {
-      this.cartItems = items;
+      // عند جلب العناصر، خزّن الكمية الحالية في previousQuantity
+      this.cartItems = items.map(item => ({ ...item, previousQuantity: item.quantity }));
       this.calculateTotal();
     });
 
@@ -26,20 +27,38 @@ export class CartComponent implements OnInit {
   }
 
   calculateTotal() {
-    this.total = this.cartItems.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
+    this.total = this.cartItems.reduce(
+      (acc, item) => acc + item.product.price * item.quantity,
+      0
+    );
   }
 
   removeItem(index: number) {
     const product = this.cartItems[index].product;
     this.cartService.remove(product.id);
-
+    this.cartItems.splice(index, 1);
+    this.calculateTotal();
     alert(`${product.name} has been removed from your cart.`);
   }
 
-  updateQuantity(index: number, qty: number) {
-    const quantity = Number(qty);
-    if (quantity < 1) return;
-    const productId = this.cartItems[index].product.id;
-    this.cartService.updateQuantity(productId, quantity);
+  onInputChange(index: number, value: string, inputElement: HTMLInputElement) {
+    const qty = Number(value);
+    const item = this.cartItems[index];
+
+    if (qty < 1) {
+      const confirmDelete = confirm(`Do you want to remove ${item.product.name} from your cart?`);
+      if (confirmDelete) {
+        this.removeItem(index);
+      } else {
+        setTimeout(() => {
+          inputElement.value = item.previousQuantity.toString();
+        });
+      }
+      return;
+    }
+    item.quantity = qty;
+    item.previousQuantity = qty;
+    this.cartService.updateQuantity(item.product.id, qty);
+    this.calculateTotal();
   }
 }

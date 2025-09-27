@@ -16,7 +16,6 @@ export class CheckoutComponent {
   cartItems$: Observable<CartItem[]>;
   total$: Observable<number>;
 
-
   customer = {
     name: '',
     address: '',

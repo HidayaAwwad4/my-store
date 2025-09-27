@@ -17,6 +17,7 @@
         <a routerLink="/checkout" class="checkout-btn">Proceed to Checkout</a>
       </div>
     </div>
+
     <div class="cart-item" *ngFor="let item of cartItems; index as i">
       <img [src]="item.product.imageUrl" [alt]="item.product.name">
       <div class="details">
@@ -24,11 +25,13 @@
         <p>${{ item.product.price }}</p>
         <label>
           Quantity:
-          <input type="number" [value]="item.quantity" (input)="updateQuantity(i, $any($event.target).value)">
+          <input type="number"
+                 [value]="item.quantity"
+                 #qtyInput
+                 (input)="onInputChange(i, qtyInput.value, qtyInput)">
         </label>
         <button (click)="removeItem(i)">Remove</button>
       </div>
     </div>
-
   </div>
 </div>
